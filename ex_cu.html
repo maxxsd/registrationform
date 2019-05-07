@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+   <title></title>
+</head>
+<body>
+
+   <form name="f1" method="post" action="welcome.html"onsubmit="return(validregister());">
+
+	<table>
+            <tr>
+		<td>Name</td>
+		<td><input type="text" name="fname"></td>
+	   </tr>
+           <tr>
+                <td>Address</td>
+		<td><textarea name="address"></textarea></td>
+	  </tr>
+	  <tr>
+	      <td>Email</td>
+	      <td><input type="email" name="semail"></td>
+	  </tr>
+         <tr>
+	     <td>Password</td>
+             <td><input type="password" name="spass"></td>
+         </tr>
+         <tr>
+            <td colspan="2"><input type="submit" name="s1" value="register"></td>
+         </tr>
+
+        </table>
+</form>
+</body>
+<script type="text/javascript">
+  function validregister()
+  {
+    if(document.f1.fname.value=="")
+    {
+      alert("Please provide your Full Name");
+      document.f1.address.focus();
+      return false;
+    }
+    if(document.f1.address.value=="")
+    {
+      alert("Please provide your Address");
+      document.f1.address.focus();
+      return false;
+    }
+    if(document.f1.semail.value=="")
+    {
+       alert("Please provide your Email");
+      document.f1.semail.focus();
+      return false;
+    }
+    if(document.f1.spass.value=="")
+    {
+      alert("Please provide your password");
+      document.f1.spass.focus();
+      return false;
+    }
+
+  }
+</script>
+</html>
